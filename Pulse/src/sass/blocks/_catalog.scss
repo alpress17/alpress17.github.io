@@ -1,8 +1,8 @@
 .catalog {
 	padding-bottom: 100px;
-		.container {
-			padding: 0 5px;
-		}
+	.container {
+		padding: 0 5px;
+	}
 	&__tabs {
 		margin-top: 70px;
 		margin-bottom: 0;
@@ -52,13 +52,15 @@
 			display: flex;
 		}
 	}
+	&__catalog-item { 					/* catalog__catalog-item  - класс для позиционирования блока catalog-item */
+		padding: 20px 20px 26px 20px;
+		margin-bottom: 20px;
+	}
 	&-item {
 		width: 300px;
 		min-height: 440px;
 		border: solid 2px #e8e8e8;
-		padding: 20px 20px 26px 20px;
 		overflow: hidden;
-		margin-bottom: 20px;
 		&__img {
 			display: block;
 			margin: 0 auto;
