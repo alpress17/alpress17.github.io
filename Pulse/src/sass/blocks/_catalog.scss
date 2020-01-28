@@ -4,14 +4,12 @@
 		padding: 0 5px;
 	}
 	&__tabs {
-		margin-top: 70px;
-		margin-bottom: 0;
+		margin: 70px 20px 0 20px;
 		padding-left: 0;
 		list-style-type: none;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
 	}
 	&__tab {
 		width: 220px;
@@ -31,7 +29,6 @@
 			box-shadow: 2px 2px 10px $main-color;
 			border: solid 1px $main-color;
 			// border: none;
-
 		}
 		div {
 			transform: skewX(25deg);
@@ -40,19 +37,19 @@
 			color: #fff;
 			background-color: $main-color;
 			border: none;
-			
 		}
 	}
 	&__content {
 		margin-top: 60px;
 		display: none;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		flex-wrap: wrap;
 		&_active {
 			display: flex;
 		}
 	}
-	&__catalog-item { 					/* catalog__catalog-item  - класс для позиционирования блока catalog-item */
+	&__catalog-item {
+		/* catalog__catalog-item  - класс для позиционирования блока catalog-item */
 		padding: 20px 20px 26px 20px;
 		margin-bottom: 20px;
 	}
@@ -151,7 +148,7 @@
 				color: #555555;
 				margin-bottom: 20px;
 				&::before {
-					content: '';
+					content: "";
 					position: absolute;
 					width: 5px;
 					height: 5px;
@@ -179,6 +176,18 @@
 			&:hover {
 				color: $main-color;
 			}
+		}
+	}
+	.fade {
+		animation-name: fade;
+		animation-duration: 2.5s;
+	}
+	@keyframes fade {
+		from {
+			opacity: 0.1;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 }

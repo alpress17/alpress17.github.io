@@ -1,7 +1,8 @@
-@media (max-width: 992px) { /* ============================ Responsive 769px - 992px ============================ */
-
+/* ============================ Responsive 769px - 992px ============================ */
+@media (max-width: 992px) {
 }
-@media (max-width: 768px) { /* ============================ Responsive 576px - 768px ============================ */
+/* ============================ Responsive 576px - 768px ============================ */
+@media (max-width: 768px) {
 	.header {
 		flex-wrap: wrap;
 		align-items: flex-start;
@@ -9,7 +10,7 @@
 			position: absolute;
 			top: 65px;
 			left: 78px;
-			order:3;
+			order: 3;
 			font-size: 12px;
 			span {
 				display: inline-block;
@@ -22,7 +23,7 @@
 		}
 		&__phone {
 			font-size: 16px;
-		}	
+		}
 	}
 	.promo {
 		width: 100%;
@@ -76,13 +77,14 @@
 	}
 }
 
-@media (max-width: 575px) { /* ============================ Responsive 320px - 575px ============================ */
+/* ============================ Responsive 320px - 575px ============================ */
+@media (max-width: 575px) {
 	.header {
 		flex-direction: column;
 		align-items: center;
 		&__official {
 			position: unset;
-			
+
 			display: inline-block;
 			margin-top: 5px;
 			font-size: 10px;
@@ -106,7 +108,7 @@
 		padding-bottom: 40px;
 		&__wrapper {
 			margin-top: 30px;
-			align-items: center
+			align-items: center;
 		}
 		&__header {
 			margin-top: 30px;
@@ -162,7 +164,6 @@
 		}
 	}
 	.consultation {
-		
 		min-height: 500px;
 		padding: 50px 0;
 		.title_left {
@@ -177,5 +178,4 @@
 			max-width: 300px;
 		}
 	}
-
 }
