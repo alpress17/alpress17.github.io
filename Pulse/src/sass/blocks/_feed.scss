@@ -1,0 +1,38 @@
+.feed {
+	min-height: 950px;
+	&__wrapper {
+		padding: 70px 0;
+	}
+	&__item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: 100px;
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
+		img {
+			max-width: 169px;
+			max-height: 169px;
+		}
+	}
+	&__block {
+		padding-left: 60px;
+		max-width: 650px;
+		text-align: left;
+	}
+	&__userName {
+		font-size: 18px;
+		font-weight: 700;
+		color: #0d0d0d;
+	}
+	&__marathon {
+		margin-top: 10px;
+		font-size: 14px;
+		font-weight: 300;
+		color: #646464;
+	}
+	&__descr {
+		margin-top: 19px;
+	}
+}

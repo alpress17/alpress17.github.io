@@ -203,4 +203,42 @@
 			}
 		}
 	}
+	.feed {
+		.title {
+			font-size: 24px;
+		}
+		&__item {
+			position: relative;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 40px;
+			img {
+				width: 69px;
+				display: flex;
+				position: absolute;
+				top: (-15px);
+				left: 0;
+			}
+		}
+		&__block {
+			padding: 0;
+		}
+		&__userName {
+			width: 300px;
+			padding-left: 100px;
+			font-size: 16px;
+		}
+		&__marathon {
+			width: 300px;
+			padding-left: 100px;
+			margin-top: 5px;
+			font-size: 12px;
+			line-height: 12px;
+		}
+		&__descr {
+			font-size: 12px;
+			margin-top: 19px;
+		}
+	}
 }

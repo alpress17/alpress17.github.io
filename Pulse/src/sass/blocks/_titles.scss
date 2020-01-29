@@ -1,9 +1,11 @@
 .title {
 	font-size: 30px;
+	line-height: 30px;
 	font-weight: 700;
 	text-align: center;
 	color: #0d0d0d;
 	text-transform: uppercase;
+	margin: 0;
 	&_left {
 		font-size: 36;
 		text-align: left;
