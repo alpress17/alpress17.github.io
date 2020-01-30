@@ -73,13 +73,50 @@ $(document).ready(function() {
 				$(".catalog-item__content")
 					.eq(i)
 					.toggleClass("catalog-item__content_active");
+
 				$(".catalog-item__list")
 					.eq(i)
 					.toggleClass("catalog-item__list_active");
+
+				$(".catalog-item__back")
+					.eq(i)
+					.toggleClass("catalog-item__back_active");
 			});
 		});
 	}
 
 	toggleSlide(".catalog-item__link");
 	toggleSlide(".catalog-item__back");
+
+	// =========== Modal ===========
+	$("[data-modal=consultation]").on("click", function() {
+		$(".overlay, #consultation").fadeIn("slow");
+	});
+	$(".modal__close").on("click", function() {
+		$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+	});
+
+	$(".button_mini").each(function(i) {
+		$(this).on("click", function() {
+			$("#order .modal__descr").text(
+				$(".catalog-item__subtitle")
+					.eq(i)
+					.text()
+			);
+			$(".overlay, #order").fadeIn("slow");
+		});
+	});
+
+	$(window).on("click", function(e) {
+		if (e.target.classList.contains("overlay")) {
+			$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+		}
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode === 27) {
+			// esc
+			$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
+		}
+	});
 });

@@ -1,13 +1,16 @@
 .carousel {
 	padding: 81px 0;
+	.container {
+		// margin: 0 auto;
+	}
 	&__inner {
 		position: relative;
-		max-width: 750px;
-		display: flex;
-		// flex-direction: column;
+		max-width: 520px;
+		// display: flex;
+		// justify-content: center;
 		margin: 0 auto;
 		img {
-			width: 100%;
+			max-width: 100%;
 		}
 	}
 	.slick-prev,
