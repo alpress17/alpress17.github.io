@@ -8,7 +8,7 @@
 // logging(3, 5);
 // logging(4, 11);
 
-$(document).ready(function() {
+$(document).ready(function () {
 	/*  ================================== Carousel slider js ================================== */
 	$(".carousel__inner").slick({
 		speed: 1200,
@@ -53,7 +53,7 @@ $(document).ready(function() {
 	$("ul.catalog__tabs").on(
 		"click",
 		"li:not(.catalog__tab_active)",
-		function() {
+		function () {
 			$(this)
 				.addClass("catalog__tab_active")
 				.siblings()
@@ -67,8 +67,8 @@ $(document).ready(function() {
 	);
 	/*  ================================== Catalog items js ================================== */
 	function toggleSlide(item) {
-		$(item).each(function(i) {
-			$(this).on("click", function(e) {
+		$(item).each(function (i) {
+			$(this).on("click", function (e) {
 				e.preventDefault();
 				$(".catalog-item__content")
 					.eq(i)
@@ -89,15 +89,15 @@ $(document).ready(function() {
 	toggleSlide(".catalog-item__back");
 
 	/*  ================================== Modal ================================== */
-	$("[data-modal=consultation]").on("click", function() {
+	$("[data-modal=consultation]").on("click", function () {
 		$(".overlay, #consultation").fadeIn("slow");
 	});
-	$(".modal__close").on("click", function() {
+	$(".modal__close").on("click", function () {
 		$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
 	});
 
-	$(".button_mini").each(function(i) {
-		$(this).on("click", function() {
+	$(".button_mini").each(function (i) {
+		$(this).on("click", function () {
 			$("#order .modal__descr").text(
 				$(".catalog-item__subtitle")
 					.eq(i)
@@ -107,13 +107,13 @@ $(document).ready(function() {
 		});
 	});
 
-	$(window).on("click", function(e) {
+	$(window).on("click", function (e) {
 		if (e.target.classList.contains("overlay")) {
 			$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
 		}
 	});
 
-	$(document).keyup(function(e) {
+	$(document).keyup(function (e) {
 		if (e.keyCode === 27) {
 			// esc
 			$(".overlay, #consultation, #thanks, #order").fadeOut("slow");
@@ -155,4 +155,39 @@ $(document).ready(function() {
 	validateForms("#order form");
 
 	$("input[name=phone]").mask("+7 (999) 999-99-99");
+
+	/*  ================================== send DATA on server ================================== */
+	$('form').submit(function (e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function () {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('slow');
+
+			$('form').trigger('reset');
+		});
+		return false;
+	});
+
+	/*  ================================== Smooth scroll and pageup ================================== */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+
+	$("a[href=#up]").click(function () {
+		const _href = $(this).attr("href");
+		$("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+		return false;
+	});
+
+	new WOW().init();
+
 });
