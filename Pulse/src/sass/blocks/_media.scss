@@ -296,7 +296,8 @@
 		}
 		&__descr {
 			font-size: 12px;
-			margin-top: 19px;
+			margin: 19px 10px;
+
 		}
 	}
 	.footer {
@@ -365,4 +366,9 @@
 			font-size: 12px;
 		}
 	}
-}
+	.pageup {
+		bottom: 40px;
+		right: 10px;
+	}
+
+}	
