@@ -1,7 +1,9 @@
 .promo {
 	min-height: 650px;
 	padding: 21px 0 93px 0;
+	
 	background: url("../img/bg_promo.webp") center (center/cover) no-repeat;
+	background-color: rgb(71, 74, 81);
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
