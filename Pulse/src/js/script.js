@@ -16,6 +16,7 @@ $(document).ready(function () {
 		// dots: true,
 		// slidesToShow: 1,
 		// slidesToScroll: 1,
+		waitForAnimate: false, /* false - allows you to quickly change slide items  */
 		prevArrow:
 			'<button type="button" class="slick-prev"><img src="icons/left.svg"></button>',
 		nextArrow:
@@ -34,17 +35,13 @@ $(document).ready(function () {
 			// 	{
 			// 		breakpoint: 768,
 			// 		settings: {
-			// 			slidesToShow: 2,
-			// 			slidesToScroll: 1,
-			// 			// dots: true,
-			// 			// arrows: false
+			// 		
 			// 		}
 			// 	},
 			// 	{
 			// 		breakpoint: 576,
 			// 		settings: {
-			// 			slidesToShow: 1,
-			// 			slidesToScroll: 1
+			// 		
 			// 		}
 			// 	}
 		]
