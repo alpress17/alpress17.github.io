@@ -174,9 +174,23 @@ $(document).ready(function() {
 		}
 	});
 
-	/*  ================================== Button VIEW ALL ================================== */
-	$("body").on("click", ".button_mini", function() {
-		$(".zoom-gallery_hidden").show("slow");
+	/*  ================================== Buttons VIEW ALL & SHOW LESS================================== */
+	$(function() {
+		$("#btn_view").click(function() {
+			$(".zoom-gallery_hidden").show("slow");
+
+			$("#btn_view").css("display", "none");
+
+			$("#btn_hide").css("display", "block");
+		});
+
+		$("#btn_hide").click(function() {
+			$(".zoom-gallery_hidden").hide("slow");
+
+			$("#btn_view").css("display", "block");
+
+			$("#btn_hide").css("display", "none");
+		});
 	});
 
 	/*  ================================== Smooth scroll and pageup ================================== */
