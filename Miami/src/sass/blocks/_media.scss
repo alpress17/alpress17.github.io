@@ -22,6 +22,9 @@
 			&__subtitle {
 				text-align: center;
 			}
+			&_hidden {
+				display: none;
+			}
 		}
 	}
 	.consultation {
@@ -132,6 +135,14 @@
 			}
 		}
 	}
+	.gallery {
+		.zoom-gallery {
+			&_hidden {
+				display: none;
+			}
+		}
+	}
+
 	.consultation {
 		&__subtitle {
 			font-size: 30px;
@@ -238,15 +249,20 @@
 	.gallery {
 		padding-bottom: 60px;
 		// width: 280px;
-		.zoom-gallery__row {
-			display: block;
-			a {
-				padding: 0;
+		.zoom-gallery {
+			&__row {
+				display: block;
+				a {
+					padding: 0;
+				}
 			}
 			img {
 				margin: 5px auto;
 				width: 280px;
 				// width: 100%;
+			}
+			&_hidden {
+				display: none;
 			}
 		}
 	}
